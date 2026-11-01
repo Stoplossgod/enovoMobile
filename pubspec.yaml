@@ -44,7 +44,14 @@ dev_dependencies:
 
 dartnative:
   assets:
-    - assets/dn-logo.png
+    - assets/png/
+    - assets/svg/
+
+  fonts:
+    - family: Inter
+      fonts:
+        - asset: assets/font/Inter-Italic-VariableFont.ttf
+
 
 # Branded launch splash + app icon: add the dartnative_splash plugin from
 # dartpub.dev, then see tool/generate_app_assets.dart.
