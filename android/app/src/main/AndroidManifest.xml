@@ -3,7 +3,7 @@
          need it, and so does any request the app makes. -->
     <uses-permission android:name="android.permission.INTERNET"/>
     <application
-        android:label="enovo_mobile_app"
+        android:label="Enovo"
         android:name=".Application"
         android:icon="@mipmap/ic_launcher">
         <activity

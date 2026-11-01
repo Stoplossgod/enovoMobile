@@ -1,16 +1,22 @@
 import 'package:dartnative/dartnative.dart';
+import 'package:enovo_mobile_app/core/colors.dart';
 
 class OnboardingCaourselSlider extends StatefulWidget {
-  OnboardingCaourselSlider({Key? key}) : super(key: key);
+  const OnboardingCaourselSlider({super.key});
 
   @override
-  _OnboardingCaourselSliderState createState() =>
+  State<OnboardingCaourselSlider> createState() =>
       _OnboardingCaourselSliderState();
 }
 
 class _OnboardingCaourselSliderState extends State<OnboardingCaourselSlider> {
   @override
   Widget build(BuildContext context) {
-    return Container(child: Scaffold());
+    return const Scaffold(
+      backgroundColor: AppColors.onboardingPage,
+      body: Center(
+        child: Text('Onboarding'),
+      ),
+    );
   }
 }
