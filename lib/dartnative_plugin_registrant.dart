@@ -34,6 +34,9 @@ abstract final class DartNativePluginRegistrant {
     if (dnTrialEnded) {
       DartNativeLicense.instance.noteTrialEnded();
     }
+    DartNativeLicense.instance.reportPluginUsage(const <String>[
+      'dartnative_splash',
+    ]);
     registerNativeBindings(
       Platform.isAndroid
           ? AndroidNativeBindings.instance

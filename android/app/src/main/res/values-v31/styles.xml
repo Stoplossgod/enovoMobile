@@ -12,7 +12,8 @@
         <item name="android:windowFullscreen">false</item>
         <item name="android:windowDrawsSystemBarBackgrounds">false</item>
         <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
-        <item name="android:windowSplashScreenBackground">#000000</item>
+        <item name="android:windowBackground">#E87B4E</item>
+        <item name="android:windowSplashScreenBackground">#E87B4E</item>
         <item name="android:windowSplashScreenAnimatedIcon">@drawable/android12splash</item>
     </style>
     <style name="NormalTheme" parent="Theme.Material3.DayNight.NoActionBar">

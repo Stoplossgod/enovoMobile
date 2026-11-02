@@ -3,7 +3,7 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:gravity="fill">
         <shape>
-            <solid android:color="#FF000000"/>
+            <solid android:color="#FFE87B4E"/>
         </shape>
     </item>
     <item>
