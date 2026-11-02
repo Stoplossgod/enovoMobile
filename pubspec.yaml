@@ -38,7 +38,7 @@ dev_dependencies:
 
 dartnative_splash:
   background_color: "#E87B4E"
-  image: assets/enovo-icon-primary-1024.png
+  image: assets/png/enovo-icon-primary-1024.png
   # Platform toggles (both default to true):
   android: true
   ios: true
