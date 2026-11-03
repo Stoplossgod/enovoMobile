@@ -1,7 +1,7 @@
 import 'package:dartnative/dartnative.dart';
 
-class JournalDestinationScreen extends StatelessWidget {
-  const JournalDestinationScreen({super.key});
+class ProfileDestinationScreen extends StatelessWidget {
+  const ProfileDestinationScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

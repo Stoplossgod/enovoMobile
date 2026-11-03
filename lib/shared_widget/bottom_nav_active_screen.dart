@@ -1,8 +1,7 @@
 import 'package:dartnative/dartnative.dart';
-import 'package:enovo_mobile_app/core/colors.dart';
 import 'package:enovo_mobile_app/features/add/add_screen.dart';
 import 'package:enovo_mobile_app/features/dashboard/home_screen.dart';
-import 'package:enovo_mobile_app/features/journal/journal_screen.dart';
+import 'package:enovo_mobile_app/features/profile/profile_screen.dart';
 import 'package:enovo_mobile_app/features/progress/progress_screen.dart';
 import 'package:enovo_mobile_app/features/schedule/schedule_screen.dart';
 import 'package:enovo_mobile_app/shared_widget/bottom_nav_bar.dart';
@@ -36,7 +35,8 @@ class _MainAppScreenState extends State<MainAppScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.page,
+      backgroundColor: Colors.transparent,
+      extendBody: true,
       body: IndexedStack(
         index: _currentTab.index,
         children: [
@@ -44,12 +44,13 @@ class _MainAppScreenState extends State<MainAppScreen> {
           const AddDestinationScreen(),
           const ScheduleDestinationScreen(),
           const ProgressDestinationScreen(),
-          const JournalDestinationScreen(),
+          const ProfileDestinationScreen(),
         ],
       ),
       bottomNavigationBar: AppBottomBar(
         currentTab: _currentTab,
         onTabSelected: _handleTabSelection,
+        backgroundColor: Colors.transparent,
       ),
     );
   }

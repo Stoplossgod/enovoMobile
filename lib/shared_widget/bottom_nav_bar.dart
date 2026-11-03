@@ -3,13 +3,7 @@ import 'package:enovo_mobile_app/core/colors.dart';
 import 'package:enovo_mobile_app/core/textstyles.dart';
 
 /// Active navigation tabs for Enovo.
-enum AppBottomNavTab {
-  home,
-  add,
-  schedule,
-  progress,
-  journal,
-}
+enum AppBottomNavTab { home, add, schedule, progress, journal }
 
 typedef EnovoBottomNavTab = AppBottomNavTab;
 
@@ -27,7 +21,7 @@ class EnovoBottomNavBar extends BottomNavigationBar {
     this.onTabSelected,
     ValueChanged<int>? onTap,
     List<BottomNavigationBarItem>? items,
-    Color backgroundColor = AppColors.surface,
+    Color? backgroundColor = Colors.transparent,
     Color selectedIconColor = AppColors.primary,
     Color iconColor = AppColors.ink,
     Color indicatorColor = const Color(0xFFFDEEE6),
@@ -45,29 +39,29 @@ class EnovoBottomNavBar extends BottomNavigationBar {
     ),
     TabBarScrollBehavior scrollBehavior = TabBarScrollBehavior.none,
   }) : super(
-          currentIndex: currentTab?.index ?? currentIndex ?? 0,
-          onTap: (index) {
-            onTap?.call(index);
-            if (index >= 0 && index < AppBottomNavTab.values.length) {
-              onTabSelected?.call(AppBottomNavTab.values[index]);
-            }
-          },
-          items: items ?? defaultItems,
-          backgroundColor: backgroundColor,
-          selectedIconColor: selectedIconColor,
-          iconColor: iconColor,
-          indicatorColor: indicatorColor,
-          labelFontStyle: labelFontStyle,
-          selectedLabelFontStyle: selectedLabelFontStyle,
-          scrollBehavior: scrollBehavior,
-        );
+         currentIndex: currentTab?.index ?? currentIndex ?? 0,
+         onTap: (index) {
+           onTap?.call(index);
+           if (index >= 0 && index < AppBottomNavTab.values.length) {
+             onTabSelected?.call(AppBottomNavTab.values[index]);
+           }
+         },
+         items: items ?? defaultItems,
+         backgroundColor: backgroundColor,
+         selectedIconColor: selectedIconColor,
+         iconColor: iconColor,
+         indicatorColor: indicatorColor,
+         labelFontStyle: labelFontStyle,
+         selectedLabelFontStyle: selectedLabelFontStyle,
+         scrollBehavior: scrollBehavior,
+       );
 
   /// 5 core native navigation destinations matching the Enovo design specification:
   /// 1. **Home**: CupertinoIcons.house / house_fill
-  /// 2. **Add**: CupertinoIcons.plus
+  /// 2. **Add**: CupertinoIcons.plus_circle_fill
   /// 3. **Schedule**: CupertinoIcons.calendar
   /// 4. **Progress**: CupertinoIcons.chart_bar / chart_bar_fill
-  /// 5. **Journal**: CupertinoIcons.pencil
+  /// 5. **Profile**: CupertinoIcons.person
   static const List<BottomNavigationBarItem> defaultItems = [
     BottomNavigationBarItem(
       label: 'Home',
@@ -76,8 +70,8 @@ class EnovoBottomNavBar extends BottomNavigationBar {
     ),
     BottomNavigationBarItem(
       label: 'Add',
-      icon: Icon(CupertinoIcons.plus),
-      activeIcon: Icon(CupertinoIcons.plus),
+      icon: Icon(CupertinoIcons.plus_circle_fill),
+      activeIcon: Icon(CupertinoIcons.plus_circle_fill),
     ),
     BottomNavigationBarItem(
       label: 'Schedule',
@@ -90,9 +84,9 @@ class EnovoBottomNavBar extends BottomNavigationBar {
       activeIcon: Icon(CupertinoIcons.chart_bar_fill),
     ),
     BottomNavigationBarItem(
-      label: 'Journal',
-      icon: Icon(CupertinoIcons.pencil),
-      activeIcon: Icon(CupertinoIcons.pencil),
+      label: 'Profile',
+      icon: Icon(CupertinoIcons.person),
+      activeIcon: Icon(CupertinoIcons.person),
     ),
   ];
 
@@ -103,7 +97,7 @@ class EnovoBottomNavBar extends BottomNavigationBar {
     ValueChanged<AppBottomNavTab>? onTabSelected,
     ValueChanged<int>? onTap,
     List<BottomNavigationBarItem>? items,
-    Color backgroundColor = AppColors.surface,
+    // Color backgroundColor = AppColors.surface,
     Color selectedIconColor = AppColors.primary,
     Color iconColor = AppColors.ink,
     Color indicatorColor = const Color(0xFFFDEEE6),
@@ -118,7 +112,7 @@ class EnovoBottomNavBar extends BottomNavigationBar {
         }
       },
       items: items ?? defaultItems,
-      backgroundColor: backgroundColor,
+      // backgroundColor: backgroundColor,
       selectedIconColor: selectedIconColor,
       iconColor: iconColor,
       indicatorColor: indicatorColor,

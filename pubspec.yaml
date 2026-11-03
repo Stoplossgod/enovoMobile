@@ -60,7 +60,7 @@ dartnative:
   fonts:
     - family: Inter
       fonts:
-        - asset: assets/font/Inter-Italic-VariableFont.ttf
+        - asset: assets/font/Inter-VariableFont.ttf
 
 
 # Branded launch splash + app icon: add the dartnative_splash plugin from

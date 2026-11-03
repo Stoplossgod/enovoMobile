@@ -70,7 +70,9 @@ abstract final class AppTheme {
     displayLarge: AppTextStyles.displayLarge.copyWith(color: AppColors.page),
     displayMedium: AppTextStyles.displayMedium.copyWith(color: AppColors.page),
     headlineLarge: AppTextStyles.headlineLarge.copyWith(color: AppColors.page),
-    headlineMedium: AppTextStyles.headlineMedium.copyWith(color: AppColors.page),
+    headlineMedium: AppTextStyles.headlineMedium.copyWith(
+      color: AppColors.page,
+    ),
     headlineSmall: AppTextStyles.headlineSmall.copyWith(color: AppColors.page),
     titleLarge: AppTextStyles.titleLarge.copyWith(color: AppColors.page),
     titleMedium: AppTextStyles.titleMedium.copyWith(color: AppColors.page),
