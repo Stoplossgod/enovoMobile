@@ -1,7 +1,7 @@
 import 'package:dartnative/dartnative.dart';
 import 'package:enovo_mobile_app/core/colors.dart';
 import 'package:enovo_mobile_app/core/routes.dart';
-import 'package:enovo_mobile_app/features/dashboard/home_screen.dart';
+import 'package:enovo_mobile_app/shared_widget/bottom_nav_active_screen.dart';
 
 class OnboardingCaourselSlider extends StatefulWidget {
   const OnboardingCaourselSlider({super.key});
@@ -33,7 +33,7 @@ class _OnboardingCaourselSliderState extends State<OnboardingCaourselSlider> {
               variant: ButtonVariant.filled,
               color: AppColors.primary,
               onPressed: () {
-                AppRouter.pushReplacement(context, const HomeScreen());
+                AppRouter.pushReplacement(context, const MainAppScreen());
               },
             ),
           ],

@@ -1,17 +1,19 @@
 import 'package:dartnative/dartnative.dart';
-import 'package:enovo_mobile_app/features/dashboard/home_screen.dart';
+import 'package:enovo_mobile_app/shared_widget/bottom_nav_active_screen.dart';
 import 'package:enovo_mobile_app/shared_widget/onboarding_caoursel_slider.dart';
 
 class AppRouter {
   AppRouter._();
 
   static const String onboarding = '/onboarding';
+  static const String mainApp = '/main-app';
   static const String home = '/home';
-  static const String initial = onboarding;
+  static const String initial = mainApp;
 
   static final Map<String, WidgetBuilder> routes = {
     onboarding: (_) => const OnboardingCaourselSlider(),
-    home: (_) => const HomeScreen(),
+    mainApp: (_) => const MainAppScreen(),
+    home: (_) => const MainAppScreen(),
   };
 
   static Future<T?> push<T>(BuildContext context, Widget screen) {
