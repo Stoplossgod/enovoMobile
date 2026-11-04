@@ -1,6 +1,9 @@
 import 'package:dartnative/dartnative.dart';
 import 'package:enovo_mobile_app/core/colors.dart';
+import 'package:enovo_mobile_app/core/routes.dart';
 import 'package:enovo_mobile_app/core/textstyles.dart';
+import 'package:enovo_mobile_app/features/profile/profile_notification_screen.dart';
+import 'package:enovo_mobile_app/features/profile/profile_update_screen.dart';
 
 class ProfileDestinationScreen extends StatefulWidget {
   const ProfileDestinationScreen({super.key});
@@ -121,7 +124,9 @@ class _ProfileDestinationScreenState extends State<ProfileDestinationScreen> {
 
                     // Edit Profile Button
                     GestureDetector(
-                      onTap: () {},
+                      onTap: () {
+                        AppRouter.push(context, const ProfileUpdateScreen());
+                      },
                       child: Container(
                         width: 48,
                         height: 48,
@@ -182,7 +187,19 @@ class _ProfileDestinationScreenState extends State<ProfileDestinationScreen> {
                         mainAxisSize: MainAxisSize.min,
                         children: [
                           GestureDetector(
-                            onTap: () {},
+                            onTap: () {
+                              if (item['title'] == 'Notifications') {
+                                AppRouter.push(
+                                  context,
+                                  const ProfileNotificationScreen(),
+                                );
+                              } else {
+                                AppRouter.push(
+                                  context,
+                                  const ProfileUpdateScreen(),
+                                );
+                              }
+                            },
                             child: Padding(
                               padding: const EdgeInsets.symmetric(
                                 horizontal: 16,

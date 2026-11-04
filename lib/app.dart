@@ -12,7 +12,7 @@ class AppInitializer extends StatelessWidget {
       title: 'Enovo',
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
-      themeMode: ThemeMode.system,
+      themeMode: ThemeMode.light,
       initialRoute: AppRouter.mainApp,
       routes: AppRouter.routes,
       home: const MainAppScreen(),
